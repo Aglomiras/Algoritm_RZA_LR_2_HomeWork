@@ -20,7 +20,7 @@ public class ACD extends MyData {
     private Attribute<Boolean> general = new Attribute<>();
     private Attribute<dirGeneral> dirGeneralAttribute = new Attribute<>();
 
-    private enum dirGeneral {
+    public enum dirGeneral { //
         UNKNOWN,
         FORWARD,
         BACKWARD,

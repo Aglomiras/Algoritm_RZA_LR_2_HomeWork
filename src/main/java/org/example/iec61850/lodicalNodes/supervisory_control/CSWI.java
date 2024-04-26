@@ -54,7 +54,7 @@ public class CSWI extends LN {
 
     @Override
     public void process() {
-        /**Проверяем каждую из ступеней ТО на наличие отключающего сигнала*/
+        /**Проверяем каждую из ступеней на наличие отключающего сигнала*/
         for (int i = 0; i < OpOpnList.size(); i++) {
             if (OpOpnList.get(i).getGeneral().getValue()) {
                 SelOpn.getStVal().setValue(true);

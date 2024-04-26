@@ -1,5 +1,7 @@
 package org.example.iec61850.lodicalNodes.system_logic_nodes;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.iec61850.lodicalNodes.LN;
 import org.example.iec61850.node_parameters.DataObject.measured_and_metered_values.MV;
 
@@ -9,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@Getter
+@Setter
 public class LSVC extends LN {
 
     private String path;

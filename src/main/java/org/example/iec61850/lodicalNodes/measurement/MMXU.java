@@ -84,12 +84,13 @@ public class MMXU extends LN {
     /**
      * Input
      */
-    public MV UaInst = new MV();
-    public MV UbInst = new MV();
-    public MV UcInst = new MV();
     public MV IaInst = new MV();
     public MV IbInst = new MV();
     public MV IcInst = new MV();
+    public MV UaInst = new MV();
+    public MV UbInst = new MV();
+    public MV UcInst = new MV();
+
     /**
      * Output
      */

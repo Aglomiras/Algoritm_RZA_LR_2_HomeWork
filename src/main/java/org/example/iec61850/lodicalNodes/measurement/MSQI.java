@@ -1,5 +1,7 @@
 package org.example.iec61850.lodicalNodes.measurement;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.iec61850.common.modelData.Vector;
 import org.example.iec61850.lodicalNodes.LN;
 import org.example.iec61850.node_parameters.DataObject.CMV;
@@ -8,6 +10,8 @@ import org.example.iec61850.node_parameters.DataObject.measured_and_metered_valu
 import org.example.iec61850.node_parameters.DataObject.measured_and_metered_values.SEQ;
 import org.example.iec61850.node_parameters.DataObject.measured_and_metered_values.WYE;
 
+@Getter
+@Setter
 public class MSQI extends LN {
     /**
      * LN: Sequence and imbalance Name: MSQI (LN: Название последовательности и дисбаланса: MSQ)

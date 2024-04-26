@@ -1,5 +1,7 @@
 package org.example.iec61850.lodicalNodes.function_protection;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.iec61850.common.modelData.Attribute;
 import org.example.iec61850.lodicalNodes.LN;
 import org.example.iec61850.node_parameters.DataObject.measured_and_metered_values.SEQ;
@@ -7,6 +9,8 @@ import org.example.iec61850.node_parameters.DataObject.settings.ASG;
 import org.example.iec61850.node_parameters.DataObject.settings.ENG;
 import org.example.iec61850.node_parameters.DataObject.status_information.ACD;
 
+@Getter
+@Setter
 public class RDIR extends LN {
     /**
      * LN: Directional element Name: RDIR (LN: Имя элемента направления: RDIR)
@@ -42,6 +46,7 @@ public class RDIR extends LN {
     public SEQ SeqV = new SEQ(); //По напряжению
     public Attribute<Double> S = new Attribute<>(); //Комплексная мощность
 
+    /**Определение направления мощности*/
     @Override
     public void process() {
         //S = 3*I*U*cos(phsU-phsA)
@@ -53,11 +58,9 @@ public class RDIR extends LN {
         );
 
         if (this.S.getValue() > 0) {
-            this.Dir.getGeneral().setValue(true); //Направление прямое
+            this.Dir.getDirGeneralAttribute().setValue(ACD.dirGeneral.FORWARD); //Направление прямое
         } else {
-            this.Dir.getGeneral().setValue(false); //Направление обратное
+            this.Dir.getDirGeneralAttribute().setValue(ACD.dirGeneral.BOTH); //Направление обратное
         }
-
     }
-
 }

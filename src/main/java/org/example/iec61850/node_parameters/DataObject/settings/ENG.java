@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.iec61850.common.modelData.Attribute;
 import org.example.iec61850.common.datatypes.MyData;
+import org.example.iec61850.node_parameters.DataObject.status_information.ACD;
 
 @Getter
 @Setter
@@ -14,6 +15,7 @@ public class ENG extends MyData {
     /**
      * Setting
      */
+    private Attribute<ACD.dirGeneral> setVal = new Attribute<>(); //
     private Attribute<setVal> setValAttribute = new Attribute<>();
 
     private enum setVal {

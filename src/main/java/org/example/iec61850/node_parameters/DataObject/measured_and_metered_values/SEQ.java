@@ -33,5 +33,4 @@ public class SEQ extends MyData {
     private Attribute<String> cdcNs = new Attribute<>();
     private Attribute<String> cdcName = new Attribute<>();
     private Attribute<String> dataNs = new Attribute<>();
-
 }
